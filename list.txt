@@ -6,3 +6,5 @@ Avocado
 Jackfruit
 Mango
 Apple
+{fruit}
+fthdtf

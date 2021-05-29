@@ -8,7 +8,7 @@ class basicRequestHandler(tornado.web.RequestHandler):
 
 class listRequestHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("index.html")
+        self.render("fruit.html")
 
 class queryParamRequestHandler(tornado.web.RequestHandler):
     def get(self):
@@ -39,7 +39,8 @@ class dataRequestHandler(tornado.web.RequestHandler):
 
 if __name__ == '__main__':
     app = tornado.web.Application([
-        (r"/", basicRequestHandler),
+        # (r"/", basicRequestHandler),
+        (r"/", listRequestHandler),
         (r"/animal", listRequestHandler),
         (r"/students/([a-z]+)/([0-9]+)", resourceParamRequestHandler),
         (r"/list", dataRequestHandler)
